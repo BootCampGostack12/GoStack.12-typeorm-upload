@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import 'reflect-metadata';
 import 'dotenv/config';
 
@@ -23,8 +22,6 @@ app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
             message: err.message,
         });
     }
-
-    console.error(err);
 
     return response.status(500).json({
         status: 'error',
